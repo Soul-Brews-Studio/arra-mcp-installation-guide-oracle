@@ -1,0 +1,159 @@
+Installed 5 packages in 9ms
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reranker precision-lift bench — bge-m3 alone vs bge-m3 + bge-reranker-v2-m3
+Corpus: 24 docs, 14 queries
+Reranker: {'status': 'ok', 'service': 'arra-reranker', 'model_loaded': True}
+
+Loading BAAI/bge-m3 (sentence-transformers)...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 97582.58it/s]
+Indexed 24 docs · dim=1024
+  Air dust paraphrase (Thai)                          RR dense=1.000  reranked=1.000  top1: th2 → en2  (180ms)
+  Air paraphrase (English)                            RR dense=1.000  reranked=1.000  top1: th2 → en2  (141ms)
+  Flood paraphrase (Thai)                             RR dense=1.000  reranked=1.000  top1: en3 ≡ en3  (33ms)
+  Flood paraphrase (English)                          RR dense=1.000  reranked=1.000  top1: en3 ≡ en3  (117ms)
+  IoT mesh paraphrase (Thai)                          RR dense=1.000  reranked=1.000  top1: en5 ≡ en5  (33ms)
+  IoT mesh paraphrase (English)                       RR dense=1.000  reranked=1.000  top1: en5 ≡ en5  (34ms)
+  Beer-vs-wine distractor (Thai)                      RR dense=1.000  reranked=1.000  top1: th8 → en8  (35ms)
+  Beer-vs-wine distractor (English)                   RR dense=0.333  reranked=0.333  top1: d8 ≡ d8  (46ms)
+  AI honesty paraphrase (Thai)                        RR dense=1.000  reranked=1.000  top1: en4 ≡ en4  (94ms)
+  AI honesty paraphrase (English)                     RR dense=1.000  reranked=1.000  top1: en4 ≡ en4  (77ms)
+  Tokenize paraphrase (Thai)                          RR dense=1.000  reranked=1.000  top1: th7 → en7  (32ms)
+  Tokenize paraphrase (English)                       RR dense=1.000  reranked=1.000  top1: th7 ≡ th7  (33ms)
+  FE/BE paraphrase (Thai)                             RR dense=1.000  reranked=1.000  top1: th6 → en6  (73ms)
+  FE/BE paraphrase (English)                          RR dense=1.000  reranked=1.000  top1: th6 → en6  (34ms)
+
+================================================================================
+  AGGREGATES — bge-m3 alone vs bge-m3 + bge-reranker-v2-m3
+================================================================================
+  MRR (dense only)            : 0.9524
+  MRR (dense + reranker)      : 0.9524
+  Δ MRR                        : +0.0000
+  Mean rank-1 dense score     : 0.6305
+  Rank-1 stability            : 57%  (queries where dense rank-1 == reranked rank-1)
+  Reranked queries            : 14 / 14
+
+--- JSON ---
+{
+  "timestamp": "2026-05-04T17:33:23Z",
+  "corpus_size": 24,
+  "queries": 14,
+  "dense_top_k_passed_to_reranker": 10,
+  "mrr_dense_only": 0.9523809523809524,
+  "mrr_reranked": 0.9523809523809524,
+  "mrr_delta": 0.0,
+  "rank1_stability_pct": 57,
+  "per_query": [
+    {
+      "label": "Air dust paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th2",
+      "reranked_top1": "en2",
+      "rerank_ms": 180
+    },
+    {
+      "label": "Air paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th2",
+      "reranked_top1": "en2",
+      "rerank_ms": 141
+    },
+    {
+      "label": "Flood paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en3",
+      "reranked_top1": "en3",
+      "rerank_ms": 33
+    },
+    {
+      "label": "Flood paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en3",
+      "reranked_top1": "en3",
+      "rerank_ms": 117
+    },
+    {
+      "label": "IoT mesh paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en5",
+      "reranked_top1": "en5",
+      "rerank_ms": 33
+    },
+    {
+      "label": "IoT mesh paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en5",
+      "reranked_top1": "en5",
+      "rerank_ms": 34
+    },
+    {
+      "label": "Beer-vs-wine distractor (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th8",
+      "reranked_top1": "en8",
+      "rerank_ms": 35
+    },
+    {
+      "label": "Beer-vs-wine distractor (English)",
+      "rr_dense": 0.3333333333333333,
+      "rr_reranked": 0.3333333333333333,
+      "dense_top1": "d8",
+      "reranked_top1": "d8",
+      "rerank_ms": 46
+    },
+    {
+      "label": "AI honesty paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en4",
+      "reranked_top1": "en4",
+      "rerank_ms": 94
+    },
+    {
+      "label": "AI honesty paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "en4",
+      "reranked_top1": "en4",
+      "rerank_ms": 77
+    },
+    {
+      "label": "Tokenize paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th7",
+      "reranked_top1": "en7",
+      "rerank_ms": 32
+    },
+    {
+      "label": "Tokenize paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th7",
+      "reranked_top1": "th7",
+      "rerank_ms": 33
+    },
+    {
+      "label": "FE/BE paraphrase (Thai)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th6",
+      "reranked_top1": "en6",
+      "rerank_ms": 73
+    },
+    {
+      "label": "FE/BE paraphrase (English)",
+      "rr_dense": 1.0,
+      "rr_reranked": 1.0,
+      "dense_top1": "th6",
+      "reranked_top1": "en6",
+      "rerank_ms": 34
+    }
+  ]
+}
