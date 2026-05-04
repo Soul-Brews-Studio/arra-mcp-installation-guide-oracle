@@ -1,0 +1,1124 @@
+Extended Embedding Benchmark — paraphrase + distractor
+Corpus: 24 docs (12 Thai, 12 English; 8 distractors)
+Queries: 14 paraphrased (7 Thai, 7 English)
+Machine: m5 (18 CPUs)
+
+============================================================
+  Model: nomic-embed-text
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-extbench-nomic-embed-text-1777910603640
+[LanceDB] Collection 'extbench_nomic_embed_text' ready
+[LanceDB] Added 24 documents
+  Indexed 24 docs in 698ms
+  Dimensions: 768
+  Air dust paraphrase (Thai): 10ms  R@1✗ R@5✗ cross✗  → [d1,th5,th4,d5,en1]
+  Air pollution paraphrase (English): 9ms  R@1✓ R@5✓ cross✗  → [en2,en3,en5,en8,d6]
+  Flood paraphrase (Thai): 8ms  R@1✗ R@5✗ cross✗  → [d1,th5,th4,d5,en1]
+  Flood paraphrase (English): 10ms  R@1✓ R@5✓ cross✗  → [en3,en5,d6,en2,th3]
+  IoT mesh paraphrase (Thai): 8ms  R@1✗ R@5✓ cross✗  → [d1,th5,th4,d5,en1]
+  IoT mesh paraphrase (English): 10ms  R@1✓ R@5✓ cross✗  → [en5,en3,d5,th4,th5]
+  Beer-vs-wine distractor (Thai): 8ms  R@1✗ R@5✗ cross✗  → [d1,th5,th4,d5,en1]
+  Beer-vs-wine distractor (English): 10ms  R@1✓ R@5✓ cross✓  → [en8,d8,th8,d4,d5]
+  AI honesty paraphrase (Thai): 8ms  R@1✗ R@5✓ cross✗  → [d1,th5,th4,d5,en1]
+  AI honesty paraphrase (English): 10ms  R@1✓ R@5✓ cross✗  → [en4,en6,en8,en1,d6]
+  Tokenize paraphrase (Thai): 8ms  R@1✗ R@5✓ cross✓  → [d1,th5,en7,th4,d5]
+  Tokenize paraphrase (English): 10ms  R@1✓ R@5✓ cross✗  → [en7,en2,d7,th3,d6]
+  FE/BE paraphrase (Thai): 7ms  R@1✓ R@5✓ cross✗  → [th6,d1,th5,th4,d5]
+  FE/BE paraphrase (English): 10ms  R@1✓ R@5✓ cross✗  → [en6,d1,th5,en1,th4]
+[LanceDB] Collection 'extbench_nomic_embed_text' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: bge-m3
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-extbench-bge-m3-1777910604515
+[LanceDB] Collection 'extbench_bge_m3' ready
+[LanceDB] Added 24 documents
+  Indexed 24 docs in 1783ms
+  Dimensions: 1024
+  Air dust paraphrase (Thai): 50ms  R@1✓ R@5✓ cross✓  → [th2,en2,th3,d3,th8]
+  Air pollution paraphrase (English): 48ms  R@1✓ R@5✓ cross✓  → [th2,en2,th3,en3,en5]
+  Flood paraphrase (Thai): 48ms  R@1✓ R@5✓ cross✓  → [en3,th3,th8,th5,th2]
+  Flood paraphrase (English): 47ms  R@1✓ R@5✓ cross✓  → [en3,th3,th8,en2,en8]
+  IoT mesh paraphrase (Thai): 60ms  R@1✓ R@5✓ cross✓  → [th5,en5,d5,th3,th6]
+  IoT mesh paraphrase (English): 48ms  R@1✓ R@5✓ cross✓  → [en5,th5,th3,d5,th6]
+  Beer-vs-wine distractor (Thai): 46ms  R@1✓ R@5✓ cross✓  → [th8,en8,d7,d1,d2]
+  Beer-vs-wine distractor (English): 49ms  R@1✓ R@5✓ cross✓  → [th8,en8,d7,d8,d4]
+  AI honesty paraphrase (Thai): 49ms  R@1✓ R@5✓ cross✓  → [th4,en4,th6,en6,th8]
+  AI honesty paraphrase (English): 46ms  R@1✓ R@5✓ cross✓  → [th4,en4,en6,th6,th8]
+  Tokenize paraphrase (Thai): 49ms  R@1✓ R@5✓ cross✓  → [th7,en7,d5,th4,th6]
+  Tokenize paraphrase (English): 47ms  R@1✓ R@5✓ cross✓  → [th7,en7,th4,th6,d5]
+  FE/BE paraphrase (Thai): 48ms  R@1✓ R@5✓ cross✓  → [th6,en6,th4,d5,th7]
+  FE/BE paraphrase (English): 47ms  R@1✓ R@5✓ cross✓  → [th6,en6,th4,en4,th7]
+[LanceDB] Collection 'extbench_bge_m3' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: qwen3-embedding
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-extbench-qwen3-embedding-1777910606988
+[LanceDB] Collection 'extbench_qwen3_embedding' ready
+[LanceDB] Added 24 documents
+  Indexed 24 docs in 1599ms
+  Dimensions: 1024
+  Air dust paraphrase (Thai): 37ms  R@1✓ R@5✓ cross✓  → [en2,th2,th5,en5,th3]
+  Air pollution paraphrase (English): 37ms  R@1✓ R@5✓ cross✓  → [en2,th2,en3,en5,th3]
+  Flood paraphrase (Thai): 37ms  R@1✓ R@5✓ cross✓  → [th3,en3,en2,d1,en5]
+  Flood paraphrase (English): 36ms  R@1✓ R@5✓ cross✓  → [en3,th3,en5,en2,d4]
+  IoT mesh paraphrase (Thai): 38ms  R@1✓ R@5✓ cross✓  → [th5,en5,en3,en2,th6]
+  IoT mesh paraphrase (English): 36ms  R@1✓ R@5✓ cross✓  → [en5,th5,en3,en2,d6]
+  Beer-vs-wine distractor (Thai): 37ms  R@1✓ R@5✓ cross✓  → [th8,d7,en8,d8,d4]
+  Beer-vs-wine distractor (English): 37ms  R@1✗ R@5✓ cross✗  → [d8,en8,d7,th8,d4]
+  AI honesty paraphrase (Thai): 37ms  R@1✓ R@5✓ cross✓  → [th4,en4,th5,en7,th8]
+  AI honesty paraphrase (English): 35ms  R@1✓ R@5✓ cross✓  → [en4,th4,en7,en1,th6]
+  Tokenize paraphrase (Thai): 36ms  R@1✓ R@5✓ cross✓  → [th7,en7,th4,en4,en2]
+  Tokenize paraphrase (English): 36ms  R@1✓ R@5✓ cross✓  → [en7,th7,en4,en3,d8]
+  FE/BE paraphrase (Thai): 37ms  R@1✓ R@5✓ cross✓  → [th6,en6,en4,en2,th4]
+  FE/BE paraphrase (English): 35ms  R@1✓ R@5✓ cross✓  → [en6,th6,en4,en2,en7]
+[LanceDB] Collection 'extbench_qwen3_embedding' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: qwen3-embedding:4b
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-extbench-qwen3-embedding-4b-1777910609102
+[LanceDB] Collection 'extbench_qwen3_embedding_4b' ready
+[LanceDB] Added 24 documents
+  Indexed 24 docs in 2620ms
+  Dimensions: 2560
+  Air dust paraphrase (Thai): 79ms  R@1✓ R@5✓ cross✓  → [th2,en2,th3,th5,en5]
+  Air pollution paraphrase (English): 64ms  R@1✓ R@5✓ cross✓  → [en2,th2,en5,en3,th5]
+  Flood paraphrase (Thai): 80ms  R@1✓ R@5✓ cross✓  → [en3,th3,d2,en2,en5]
+  Flood paraphrase (English): 64ms  R@1✓ R@5✓ cross✓  → [en3,th3,en2,d2,en5]
+  IoT mesh paraphrase (Thai): 81ms  R@1✓ R@5✓ cross✓  → [th5,en5,en2,en3,th3]
+  IoT mesh paraphrase (English): 62ms  R@1✓ R@5✓ cross✓  → [en5,th5,en2,en3,th3]
+  Beer-vs-wine distractor (Thai): 81ms  R@1✓ R@5✓ cross✓  → [th8,d7,en8,d8,d3]
+  Beer-vs-wine distractor (English): 63ms  R@1✓ R@5✓ cross✓  → [en8,th8,d8,d7,d4]
+  AI honesty paraphrase (Thai): 80ms  R@1✓ R@5✓ cross✓  → [th4,en4,th7,en7,th8]
+  AI honesty paraphrase (English): 63ms  R@1✓ R@5✓ cross✓  → [en4,th4,d2,en1,en3]
+  Tokenize paraphrase (Thai): 82ms  R@1✓ R@5✓ cross✓  → [th7,en7,th4,en4,d5]
+  Tokenize paraphrase (English): 65ms  R@1✓ R@5✓ cross✓  → [en7,th7,en4,en2,en3]
+  FE/BE paraphrase (Thai): 82ms  R@1✓ R@5✓ cross✓  → [th6,en6,en4,en2,th4]
+  FE/BE paraphrase (English): 66ms  R@1✓ R@5✓ cross✓  → [en6,th6,en4,en2,en5]
+[LanceDB] Collection 'extbench_qwen3_embedding_4b' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: qllama/multilingual-e5-large-instruct
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-extbench-qllama-multilingual-e5-large-instruct-1777910612742
+[LanceDB] Collection 'extbench_qllama_multilingual_e5_large_instruct' ready
+[LanceDB] Added 24 documents
+  Indexed 24 docs in 1820ms
+  Dimensions: 1024
+  Air dust paraphrase (Thai): 63ms  R@1✓ R@5✓ cross✗  → [th2,th5,th3,en2,th8]
+  Air pollution paraphrase (English): 50ms  R@1✓ R@5✓ cross✓  → [en2,th2,en5,en3,th5]
+  Flood paraphrase (Thai): 48ms  R@1✓ R@5✓ cross✗  → [th3,th5,d1,th2,en3]
+  Flood paraphrase (English): 45ms  R@1✓ R@5✓ cross✓  → [en3,en5,th3,en2,th5]
+  IoT mesh paraphrase (Thai): 47ms  R@1✓ R@5✓ cross✓  → [th5,en5,th3,th2,th6]
+  IoT mesh paraphrase (English): 46ms  R@1✓ R@5✓ cross✓  → [en5,th5,en3,en2,d6]
+  Beer-vs-wine distractor (Thai): 49ms  R@1✓ R@5✓ cross✗  → [th8,d7,d1,th3,th5]
+  Beer-vs-wine distractor (English): 48ms  R@1✗ R@5✓ cross✓  → [d8,en8,th8,d7,d4]
+  AI honesty paraphrase (Thai): 59ms  R@1✓ R@5✓ cross✗  → [th4,th6,th5,th7,th1]
+  AI honesty paraphrase (English): 50ms  R@1✓ R@5✓ cross✓  → [en4,th4,en5,en6,en1]
+  Tokenize paraphrase (Thai): 46ms  R@1✓ R@5✓ cross✓  → [th7,en7,th6,th4,d5]
+  Tokenize paraphrase (English): 47ms  R@1✓ R@5✓ cross✓  → [en7,th7,en4,en6,en5]
+  FE/BE paraphrase (Thai): 48ms  R@1✓ R@5✓ cross✓  → [th6,en6,th5,th7,th3]
+  FE/BE paraphrase (English): 48ms  R@1✓ R@5✓ cross✓  → [th6,en6,en4,en5,en7]
+[LanceDB] Collection 'extbench_qllama_multilingual_e5_large_instruct' deleted
+[LanceDB] Closed
+
+
+================================================================================
+  SUMMARY — paraphrase queries with distractors
+================================================================================
+
+| Metric            | nomic-embed-text   | bge-m3             | qwen3-embedding    | qwen3-embedding:4b | qllama/multilingua |
+|-------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Dimensions        | 768                | 1024               | 1024               | 2560               | 1024               |
+| Index 24 docs (ms) | 698                | 1783               | 1599               | 2620               | 1820               |
+| Query avg (ms)    | 9                  | 49                 | 37                 | 72                 | 50                 |
+| **Recall@1 %**    | **57**             | **100**            | **93**             | **100**            | **93**             |
+| **Recall@5 %**    | **79**             | **100**            | **100**            | **100**            | **100**            |
+| Cross-lang@3 %    | 14                 | 100                | 93                 | 100                | 71                 |
+
+
+Done.
+
+--- JSON ---
+{
+  "timestamp": "2026-05-04T16:03:35.269Z",
+  "machine": "m5",
+  "corpus": {
+    "docs": 24,
+    "queries": 14,
+    "distractors": 8
+  },
+  "results": [
+    {
+      "model": "nomic-embed-text",
+      "dims": 768,
+      "indexMs": 698,
+      "recall_at_1": 57,
+      "recall_at_5": 79,
+      "cross_lang_at_3": 14,
+      "avgQueryMs": 9,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "th4",
+            "d5",
+            "en1"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": false
+        },
+        {
+          "label": "Air pollution paraphrase (English)",
+          "top5": [
+            "en2",
+            "en3",
+            "en5",
+            "en8",
+            "d6"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "th4",
+            "d5",
+            "en1"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": false
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "en5",
+            "d6",
+            "en2",
+            "th3"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "th4",
+            "d5",
+            "en1"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "en3",
+            "d5",
+            "th4",
+            "th5"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "th4",
+            "d5",
+            "en1"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": false
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "en8",
+            "d8",
+            "th8",
+            "d4",
+            "d5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "th4",
+            "d5",
+            "en1"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "en6",
+            "en8",
+            "en1",
+            "d6"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "d1",
+            "th5",
+            "en7",
+            "th4",
+            "d5"
+          ],
+          "cross": true,
+          "r1": false,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "en7",
+            "en2",
+            "d7",
+            "th3",
+            "d6"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "d1",
+            "th5",
+            "th4",
+            "d5"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "en6",
+            "d1",
+            "th5",
+            "en1",
+            "th4"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        }
+      ]
+    },
+    {
+      "model": "bge-m3",
+      "dims": 1024,
+      "indexMs": 1783,
+      "recall_at_1": 100,
+      "recall_at_5": 100,
+      "cross_lang_at_3": 100,
+      "avgQueryMs": 49,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th2",
+            "en2",
+            "th3",
+            "d3",
+            "th8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Air pollution paraphrase (English)",
+          "top5": [
+            "th2",
+            "en2",
+            "th3",
+            "en3",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "en3",
+            "th3",
+            "th8",
+            "th5",
+            "th2"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "th3",
+            "th8",
+            "en2",
+            "en8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "en5",
+            "d5",
+            "th3",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "th3",
+            "d5",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "en8",
+            "d7",
+            "d1",
+            "d2"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "th8",
+            "en8",
+            "d7",
+            "d8",
+            "d4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "en4",
+            "th6",
+            "en6",
+            "th8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "th4",
+            "en4",
+            "en6",
+            "th6",
+            "th8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "en7",
+            "d5",
+            "th4",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "th7",
+            "en7",
+            "th4",
+            "th6",
+            "d5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "th4",
+            "d5",
+            "th7"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "th6",
+            "en6",
+            "th4",
+            "en4",
+            "th7"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        }
+      ]
+    },
+    {
+      "model": "qwen3-embedding",
+      "dims": 1024,
+      "indexMs": 1599,
+      "recall_at_1": 93,
+      "recall_at_5": 100,
+      "cross_lang_at_3": 93,
+      "avgQueryMs": 37,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "en2",
+            "th2",
+            "th5",
+            "en5",
+            "th3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Air pollution paraphrase (English)",
+          "top5": [
+            "en2",
+            "th2",
+            "en3",
+            "en5",
+            "th3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "th3",
+            "en3",
+            "en2",
+            "d1",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "th3",
+            "en5",
+            "en2",
+            "d4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "en5",
+            "en3",
+            "en2",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "en3",
+            "en2",
+            "d6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "d7",
+            "en8",
+            "d8",
+            "d4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "d8",
+            "en8",
+            "d7",
+            "th8",
+            "d4"
+          ],
+          "cross": false,
+          "r1": false,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "en4",
+            "th5",
+            "en7",
+            "th8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th4",
+            "en7",
+            "en1",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "en7",
+            "th4",
+            "en4",
+            "en2"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "en7",
+            "th7",
+            "en4",
+            "en3",
+            "d8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "en4",
+            "en2",
+            "th4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "en6",
+            "th6",
+            "en4",
+            "en2",
+            "en7"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        }
+      ]
+    },
+    {
+      "model": "qwen3-embedding:4b",
+      "dims": 2560,
+      "indexMs": 2620,
+      "recall_at_1": 100,
+      "recall_at_5": 100,
+      "cross_lang_at_3": 100,
+      "avgQueryMs": 72,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th2",
+            "en2",
+            "th3",
+            "th5",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Air pollution paraphrase (English)",
+          "top5": [
+            "en2",
+            "th2",
+            "en5",
+            "en3",
+            "th5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "en3",
+            "th3",
+            "d2",
+            "en2",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "th3",
+            "en2",
+            "d2",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "en5",
+            "en2",
+            "en3",
+            "th3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "en2",
+            "en3",
+            "th3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "d7",
+            "en8",
+            "d8",
+            "d3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "en8",
+            "th8",
+            "d8",
+            "d7",
+            "d4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "en4",
+            "th7",
+            "en7",
+            "th8"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th4",
+            "d2",
+            "en1",
+            "en3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "en7",
+            "th4",
+            "en4",
+            "d5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "en7",
+            "th7",
+            "en4",
+            "en2",
+            "en3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "en4",
+            "en2",
+            "th4"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "en6",
+            "th6",
+            "en4",
+            "en2",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        }
+      ]
+    },
+    {
+      "model": "qllama/multilingual-e5-large-instruct",
+      "dims": 1024,
+      "indexMs": 1820,
+      "recall_at_1": 93,
+      "recall_at_5": 100,
+      "cross_lang_at_3": 71,
+      "avgQueryMs": 50,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th2",
+            "th5",
+            "th3",
+            "en2",
+            "th8"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Air pollution paraphrase (English)",
+          "top5": [
+            "en2",
+            "th2",
+            "en5",
+            "en3",
+            "th5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "th3",
+            "th5",
+            "d1",
+            "th2",
+            "en3"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "en5",
+            "th3",
+            "en2",
+            "th5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "en5",
+            "th3",
+            "th2",
+            "th6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "en3",
+            "en2",
+            "d6"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "d7",
+            "d1",
+            "th3",
+            "th5"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "d8",
+            "en8",
+            "th8",
+            "d7",
+            "d4"
+          ],
+          "cross": true,
+          "r1": false,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "th6",
+            "th5",
+            "th7",
+            "th1"
+          ],
+          "cross": false,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th4",
+            "en5",
+            "en6",
+            "en1"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "en7",
+            "th6",
+            "th4",
+            "d5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "en7",
+            "th7",
+            "en4",
+            "en6",
+            "en5"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "th5",
+            "th7",
+            "th3"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "th6",
+            "en6",
+            "en4",
+            "en5",
+            "en7"
+          ],
+          "cross": true,
+          "r1": true,
+          "r5": true
+        }
+      ]
+    }
+  ]
+}
