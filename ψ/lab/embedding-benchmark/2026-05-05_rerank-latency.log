@@ -1,0 +1,95 @@
+Installed 11 packages in 48ms
+Reranker latency-under-load — POST http://127.0.0.1:8765/rerank
+Payload: query + 50 candidates ≈ 7140 chars
+Reranker health: {'status': 'ok', 'service': 'arra-reranker', 'model_loaded': True}
+
+Warmup (1 request)...
+  warmup: ok=True, 218ms
+
+================================================================================
+  Concurrency        p50       p95       p99      mean     min     max       rps  errors
+================================================================================
+  1                167ms    1468ms    1786ms     331ms   145ms  1813ms    3.02 rps  0
+  2               1068ms    1468ms    1588ms    1110ms   998ms  1588ms     1.8 rps  0
+  4               2978ms    3416ms    3425ms    2820ms  1471ms  3428ms    1.37 rps  0
+  8               7631ms    9654ms    9690ms    7495ms  4213ms  9694ms    1.03 rps  0
+  16              2517ms    8094ms    8096ms    5061ms  2476ms  8096ms    2.83 rps  0
+
+--- JSON ---
+{
+  "timestamp": "2026-05-04T19:05:07Z",
+  "url": "http://127.0.0.1:8765/rerank",
+  "candidates_per_request": 50,
+  "results": [
+    {
+      "concurrency": 1,
+      "total": 30,
+      "ok": 30,
+      "errors": 0,
+      "wall_ms": 9939,
+      "p50_ms": 167,
+      "p95_ms": 1468,
+      "p99_ms": 1786,
+      "min_ms": 145,
+      "max_ms": 1813,
+      "mean_ms": 331,
+      "rps": 3.02
+    },
+    {
+      "concurrency": 2,
+      "total": 30,
+      "ok": 30,
+      "errors": 0,
+      "wall_ms": 16650,
+      "p50_ms": 1068,
+      "p95_ms": 1468,
+      "p99_ms": 1588,
+      "min_ms": 998,
+      "max_ms": 1588,
+      "mean_ms": 1110,
+      "rps": 1.8
+    },
+    {
+      "concurrency": 4,
+      "total": 30,
+      "ok": 30,
+      "errors": 0,
+      "wall_ms": 21879,
+      "p50_ms": 2978,
+      "p95_ms": 3416,
+      "p99_ms": 3425,
+      "min_ms": 1471,
+      "max_ms": 3428,
+      "mean_ms": 2820,
+      "rps": 1.37
+    },
+    {
+      "concurrency": 8,
+      "total": 30,
+      "ok": 30,
+      "errors": 0,
+      "wall_ms": 29151,
+      "p50_ms": 7631,
+      "p95_ms": 9654,
+      "p99_ms": 9690,
+      "min_ms": 4213,
+      "max_ms": 9694,
+      "mean_ms": 7495,
+      "rps": 1.03
+    },
+    {
+      "concurrency": 16,
+      "total": 30,
+      "ok": 30,
+      "errors": 0,
+      "wall_ms": 10594,
+      "p50_ms": 2517,
+      "p95_ms": 8094,
+      "p99_ms": 8096,
+      "min_ms": 2476,
+      "max_ms": 8096,
+      "mean_ms": 5061,
+      "rps": 2.83
+    }
+  ]
+}
