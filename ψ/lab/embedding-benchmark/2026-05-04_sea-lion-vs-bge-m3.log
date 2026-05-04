@@ -1,0 +1,687 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Thai+EN paraphrase + distractor bench — Python (sentence-transformers)
+Corpus: 24 docs, 14 queries
+
+Loading BAAI/bge-m3 via st...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 82801.82it/s]
+
+============================================================
+  Model: bge-m3
+============================================================
+  Indexed 24 docs in 164ms · dim=1024
+  Air dust paraphrase (Thai)                            60ms  R@1✓ R@5✓ cross✓  → ['th2', 'en2', 'th3', 'en3', 'd1']
+  Air paraphrase (English)                              53ms  R@1✓ R@5✓ cross✓  → ['th2', 'en2', 'en5', 'en3', 'th3']
+  Flood paraphrase (Thai)                               16ms  R@1✓ R@5✓ cross✓  → ['en3', 'th3', 'th2', 'th5', 'en2']
+  Flood paraphrase (English)                            52ms  R@1✓ R@5✓ cross✓  → ['en3', 'th3', 'en2', 'th8', 'en8']
+  IoT mesh paraphrase (Thai)                            11ms  R@1✓ R@5✓ cross✓  → ['en5', 'th5', 'd5', 'd6', 'en3']
+  IoT mesh paraphrase (English)                         11ms  R@1✓ R@5✓ cross✓  → ['en5', 'th5', 'd5', 'd6', 'th6']
+  Beer-vs-wine distractor (Thai)                        60ms  R@1✓ R@5✓ cross✓  → ['th8', 'en8', 'd7', 'd8', 'd2']
+  Beer-vs-wine distractor (English)                     10ms  R@1✗ R@5✓ cross✓  → ['d8', 'd7', 'th8', 'en8', 'd4']
+  AI honesty paraphrase (Thai)                          58ms  R@1✓ R@5✓ cross✓  → ['en4', 'th4', 'th6', 'en6', 'en1']
+  AI honesty paraphrase (English)                       10ms  R@1✓ R@5✓ cross✓  → ['en4', 'th4', 'en6', 'th6', 'en1']
+  Tokenize paraphrase (Thai)                            11ms  R@1✓ R@5✓ cross✓  → ['th7', 'en7', 'd5', 'en4', 'th4']
+  Tokenize paraphrase (English)                         44ms  R@1✓ R@5✓ cross✓  → ['th7', 'en7', 'th6', 'th4', 'en6']
+  FE/BE paraphrase (Thai)                               10ms  R@1✓ R@5✓ cross✓  → ['th6', 'en6', 'th4', 'en4', 'th7']
+  FE/BE paraphrase (English)                            10ms  R@1✓ R@5✓ cross✓  → ['th6', 'en6', 'en4', 'th4', 'th7']
+
+Loading aisingapore/SEA-LION-ModernBERT-600M via manual-cls...
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 3103.96it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: aisingapore/SEA-LION-ModernBERT-600M
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+============================================================
+  Model: sea-lion-600m-cls
+============================================================
+  Indexed 24 docs in 2966ms · dim=1024
+  Air dust paraphrase (Thai)                            53ms  R@1✓ R@5✓ cross✗  → ['th2', 'th8', 'd3', 'd5', 'th3']
+  Air paraphrase (English)                              33ms  R@1✓ R@5✓ cross✓  → ['th2', 'en3', 'en5', 'en2', 'th3']
+  Flood paraphrase (Thai)                               57ms  R@1✗ R@5✓ cross✗  → ['th8', 'th2', 'th3', 'd5', 'd1']
+  Flood paraphrase (English)                            39ms  R@1✓ R@5✓ cross✗  → ['en3', 'th5', 'en5', 'th3', 'en8']
+  IoT mesh paraphrase (Thai)                            76ms  R@1✓ R@5✓ cross✓  → ['th5', 'th2', 'en5', 'th3', 'd5']
+  IoT mesh paraphrase (English)                         47ms  R@1✓ R@5✓ cross✓  → ['en5', 'th5', 'en6', 'en3', 'th6']
+  Beer-vs-wine distractor (Thai)                        88ms  R@1✓ R@5✓ cross✗  → ['th8', 'd7', 'd3', 'en8', 'd5']
+  Beer-vs-wine distractor (English)                     38ms  R@1✓ R@5✓ cross✓  → ['th8', 'en8', 'd7', 'd8', 'd4']
+  AI honesty paraphrase (Thai)                          70ms  R@1✓ R@5✓ cross✓  → ['th4', 'th7', 'en4', 'th1', 'th8']
+  AI honesty paraphrase (English)                       44ms  R@1✓ R@5✓ cross✓  → ['en4', 'th4', 'th1', 'th7', 'en7']
+  Tokenize paraphrase (Thai)                            57ms  R@1✓ R@5✓ cross✗  → ['th7', 'th4', 'th1', 'en7', 'd5']
+  Tokenize paraphrase (English)                         54ms  R@1✓ R@5✓ cross✓  → ['th7', 'en7', 'en4', 'en6', 'th1']
+  FE/BE paraphrase (Thai)                               58ms  R@1✓ R@5✓ cross✓  → ['th6', 'en6', 'th5', 'th1', 'th4']
+  FE/BE paraphrase (English)                            46ms  R@1✓ R@5✓ cross✓  → ['en6', 'th6', 'th5', 'th4', 'en3']
+
+Loading aisingapore/SEA-LION-ModernBERT-600M via manual-mean...
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 3048.02it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: aisingapore/SEA-LION-ModernBERT-600M
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+============================================================
+  Model: sea-lion-600m-mean
+============================================================
+  Indexed 24 docs in 3016ms · dim=1024
+  Air dust paraphrase (Thai)                            52ms  R@1✗ R@5✗ cross✗  → ['th8', 'th5', 'th4', 'd7', 'th3']
+  Air paraphrase (English)                              32ms  R@1✗ R@5✗ cross✗  → ['d2', 'en3', 'en5', 'en8', 'en6']
+  Flood paraphrase (Thai)                               59ms  R@1✗ R@5✓ cross✗  → ['th8', 'th3', 'th4', 'd1', 'th5']
+  Flood paraphrase (English)                            37ms  R@1✓ R@5✓ cross✗  → ['en3', 'd2', 'en5', 'th5', 'th3']
+  IoT mesh paraphrase (Thai)                            82ms  R@1✓ R@5✓ cross✗  → ['th5', 'd5', 'th8', 'th3', 'd3']
+  IoT mesh paraphrase (English)                         44ms  R@1✓ R@5✓ cross✓  → ['en5', 'th5', 'd6', 'th6', 'en8']
+  Beer-vs-wine distractor (Thai)                        87ms  R@1✓ R@5✓ cross✗  → ['th8', 'd3', 'd7', 'd5', 'th2']
+  Beer-vs-wine distractor (English)                     40ms  R@1✗ R@5✓ cross✗  → ['d8', 'en8', 'd2', 'th8', 'en3']
+  AI honesty paraphrase (Thai)                          77ms  R@1✓ R@5✓ cross✗  → ['th4', 'th1', 'th7', 'th8', 'd1']
+  AI honesty paraphrase (English)                       47ms  R@1✓ R@5✓ cross✗  → ['en4', 'th1', 'en1', 'th4', 'en6']
+  Tokenize paraphrase (Thai)                            57ms  R@1✓ R@5✓ cross✗  → ['th7', 'th1', 'th4', 'th3', 'th5']
+  Tokenize paraphrase (English)                         57ms  R@1✓ R@5✓ cross✓  → ['en7', 'th7', 'd6', 'th4', 'th6']
+  FE/BE paraphrase (Thai)                               61ms  R@1✓ R@5✓ cross✗  → ['th6', 'th5', 'th4', 'th1', 'th8']
+  FE/BE paraphrase (English)                            50ms  R@1✓ R@5✓ cross✓  → ['en6', 'th6', 'en3', 'en5', 'en4']
+
+
+================================================================================
+  SUMMARY — Python sentence-transformers, normalized cosine, paraphrase + distractor
+================================================================================
+
+| Metric            | bge-m3                    | sea-lion-600m-cls         | sea-lion-600m-mean        |
+|-------------------|---------------------------|---------------------------|---------------------------|
+| Dimensions        | 1024                      | 1024                      | 1024                      |
+| Index 24 docs (ms) | 164                       | 2966                      | 3016                      |
+| Query avg (ms)    | 29                        | 54                        | 55                        |
+| Recall@1 %        | 93                        | 93                        | 71                        |
+| Recall@5 %        | 100                       | 100                       | 86                        |
+| Cross-lang@3 %    | 100                       | 64                        | 21                        |
+
+--- JSON ---
+{
+  "timestamp": "2026-05-04T16:25:00Z",
+  "results": [
+    {
+      "model": "bge-m3",
+      "dim": 1024,
+      "index_ms": 164,
+      "avg_query_ms": 29,
+      "recall_at_1_pct": 93,
+      "recall_at_5_pct": 100,
+      "cross_lang_at_3_pct": 100,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th2",
+            "en2",
+            "th3",
+            "en3",
+            "d1"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Air paraphrase (English)",
+          "top5": [
+            "th2",
+            "en2",
+            "en5",
+            "en3",
+            "th3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "en3",
+            "th3",
+            "th2",
+            "th5",
+            "en2"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "th3",
+            "en2",
+            "th8",
+            "en8"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "en5",
+            "th5",
+            "d5",
+            "d6",
+            "en3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "d5",
+            "d6",
+            "th6"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "en8",
+            "d7",
+            "d8",
+            "d2"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "d8",
+            "d7",
+            "th8",
+            "en8",
+            "d4"
+          ],
+          "r1": false,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "en4",
+            "th4",
+            "th6",
+            "en6",
+            "en1"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th4",
+            "en6",
+            "th6",
+            "en1"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "en7",
+            "d5",
+            "en4",
+            "th4"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "th7",
+            "en7",
+            "th6",
+            "th4",
+            "en6"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "th4",
+            "en4",
+            "th7"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "th6",
+            "en6",
+            "en4",
+            "th4",
+            "th7"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        }
+      ]
+    },
+    {
+      "model": "sea-lion-600m-cls",
+      "dim": 1024,
+      "index_ms": 2966,
+      "avg_query_ms": 54,
+      "recall_at_1_pct": 93,
+      "recall_at_5_pct": 100,
+      "cross_lang_at_3_pct": 64,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th2",
+            "th8",
+            "d3",
+            "d5",
+            "th3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Air paraphrase (English)",
+          "top5": [
+            "th2",
+            "en3",
+            "en5",
+            "en2",
+            "th3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "th8",
+            "th2",
+            "th3",
+            "d5",
+            "d1"
+          ],
+          "r1": false,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "th5",
+            "en5",
+            "th3",
+            "en8"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "th2",
+            "en5",
+            "th3",
+            "d5"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "en6",
+            "en3",
+            "th6"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "d7",
+            "d3",
+            "en8",
+            "d5"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "th8",
+            "en8",
+            "d7",
+            "d8",
+            "d4"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "th7",
+            "en4",
+            "th1",
+            "th8"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th4",
+            "th1",
+            "th7",
+            "en7"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "th4",
+            "th1",
+            "en7",
+            "d5"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "th7",
+            "en7",
+            "en4",
+            "en6",
+            "th1"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "en6",
+            "th5",
+            "th1",
+            "th4"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "en6",
+            "th6",
+            "th5",
+            "th4",
+            "en3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        }
+      ]
+    },
+    {
+      "model": "sea-lion-600m-mean",
+      "dim": 1024,
+      "index_ms": 3016,
+      "avg_query_ms": 55,
+      "recall_at_1_pct": 71,
+      "recall_at_5_pct": 86,
+      "cross_lang_at_3_pct": 21,
+      "details": [
+        {
+          "label": "Air dust paraphrase (Thai)",
+          "top5": [
+            "th8",
+            "th5",
+            "th4",
+            "d7",
+            "th3"
+          ],
+          "r1": false,
+          "r5": false,
+          "cross": false
+        },
+        {
+          "label": "Air paraphrase (English)",
+          "top5": [
+            "d2",
+            "en3",
+            "en5",
+            "en8",
+            "en6"
+          ],
+          "r1": false,
+          "r5": false,
+          "cross": false
+        },
+        {
+          "label": "Flood paraphrase (Thai)",
+          "top5": [
+            "th8",
+            "th3",
+            "th4",
+            "d1",
+            "th5"
+          ],
+          "r1": false,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Flood paraphrase (English)",
+          "top5": [
+            "en3",
+            "d2",
+            "en5",
+            "th5",
+            "th3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "IoT mesh paraphrase (Thai)",
+          "top5": [
+            "th5",
+            "d5",
+            "th8",
+            "th3",
+            "d3"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "IoT mesh paraphrase (English)",
+          "top5": [
+            "en5",
+            "th5",
+            "d6",
+            "th6",
+            "en8"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "Beer-vs-wine distractor (Thai)",
+          "top5": [
+            "th8",
+            "d3",
+            "d7",
+            "d5",
+            "th2"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Beer-vs-wine distractor (English)",
+          "top5": [
+            "d8",
+            "en8",
+            "d2",
+            "th8",
+            "en3"
+          ],
+          "r1": false,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "AI honesty paraphrase (Thai)",
+          "top5": [
+            "th4",
+            "th1",
+            "th7",
+            "th8",
+            "d1"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "AI honesty paraphrase (English)",
+          "top5": [
+            "en4",
+            "th1",
+            "en1",
+            "th4",
+            "en6"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Tokenize paraphrase (Thai)",
+          "top5": [
+            "th7",
+            "th1",
+            "th4",
+            "th3",
+            "th5"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "Tokenize paraphrase (English)",
+          "top5": [
+            "en7",
+            "th7",
+            "d6",
+            "th4",
+            "th6"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        },
+        {
+          "label": "FE/BE paraphrase (Thai)",
+          "top5": [
+            "th6",
+            "th5",
+            "th4",
+            "th1",
+            "th8"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": false
+        },
+        {
+          "label": "FE/BE paraphrase (English)",
+          "top5": [
+            "en6",
+            "th6",
+            "en3",
+            "en5",
+            "en4"
+          ],
+          "r1": true,
+          "r5": true,
+          "cross": true
+        }
+      ]
+    }
+  ]
+}
