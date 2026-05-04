@@ -1,0 +1,137 @@
+Real-corpus reranker lift bench — production index + hand-labeled queries
+Queries: 12
+arra-oracle-v3: arra-oracle-v3 v26.5.2-alpha.1704
+reranker:       arra-reranker (loaded=True)
+
+  TH→EN  git anti-patterns (-C over cd)                    d#None  r#None  ≡
+  TH→EN  Buddhist rebirth as oracle identity metaphor      d#1  r#1  ≡
+  TH→EN  direnv vs .env for project credentials            d#1  r#1  ≡
+  TH→EN  self-scheduling agent vs external cron            d#1  r#1  ≡
+  TH→EN  parallel Haiku agents for large-file analysis     d#None  r#None  ≡
+  TH→EN  session 11 dual-index bge-m3 (mostly EN query)    d#1  r#1  ≡
+  TH→EN  voice tray central system                         d#1  r#1  ≡
+  EN→EN  git -C anti-pattern (English variant)             d#None  r#None  ≡
+  EN→EN  oracle incarnation philosophy                     d#None  r#None  ≡
+  API failed for EN→EN  direnv security isolation: 400 Client Error: Bad Request for url: http://localhost:47778/api/search?q=credentials+in+.envrc+rather+than+.env+for+security+isolation&limit=20&mode=hybrid
+  EN→EN  self-scheduling vs cron tradeoffs                 d#1  r#1  ≡
+  EN→EN  mobile training AI diary                          d#None  r#None  ≡
+
+================================================================================
+  REAL-CORPUS AGGREGATES — production hybrid index → reranker
+================================================================================
+  Queries succeeded            : 11 / 12
+  Target not in top-20 (either)  : 5
+  R@1 (dense hybrid)            : 54.5%  (6/11)
+  R@1 (dense + reranker)        : 54.5%  (6/11)
+  Δ R@1                          : +0.0 pts  (+0 queries)
+  MRR (dense hybrid)            : 0.5455
+  MRR (dense + reranker)        : 0.5455
+  Δ MRR                          : +0.0000
+  Flips toward correct          : 0
+  Flips away from correct       : 0
+  Net flips                     : +0
+
+--- JSON ---
+{
+  "timestamp": "2026-05-04T18:35:09Z",
+  "queries": 11,
+  "top_k_from_api": 20,
+  "r1_dense_pct": 54.54545454545454,
+  "r1_reranked_pct": 54.54545454545454,
+  "r1_delta_pts": 0.0,
+  "mrr_dense": 0.5454545454545454,
+  "mrr_reranked": 0.5454545454545454,
+  "mrr_delta": 0.0,
+  "flips_to_correct": 0,
+  "flips_away_from_correct": 0,
+  "per_query": [
+    {
+      "label": "TH→EN  git anti-patterns (-C over cd)",
+      "expected_substring": "maw-sync-best-practices",
+      "dense_rank": null,
+      "reranked_rank": null,
+      "dense_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/git/2025-12-28_git-c-not-cd_2",
+      "reranked_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/git/2025-12-28_git-c-not-cd_2"
+    },
+    {
+      "label": "TH→EN  Buddhist rebirth as oracle identity metaphor",
+      "expected_substring": "incarnation-vs-birth-oracle-identity",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "learning_github.com/laris-co/odin-oracle/ψ/memory/learnings/2026-01-23_incarnation-vs-birth-oracle-identity_0",
+      "reranked_top1_id": "learning_github.com/laris-co/odin-oracle/ψ/memory/learnings/2026-01-23_incarnation-vs-birth-oracle-identity_3"
+    },
+    {
+      "label": "TH→EN  direnv vs .env for project credentials",
+      "expected_substring": "direnv-envrc-over-env-for-project-credential",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "learning_github.com/soul-brews-studio/shrimp-oracle/ψ/memory/learnings/2026-02-02_direnv-envrc-over-env-for-project-credential_2",
+      "reranked_top1_id": "learning_github.com/soul-brews-studio/shrimp-oracle/ψ/memory/learnings/2026-02-02_direnv-envrc-over-env-for-project-credential_3"
+    },
+    {
+      "label": "TH→EN  self-scheduling agent vs external cron",
+      "expected_substring": "agent-self-scheduling-over-external-cron",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "learning_github.com/laris-co/homelab/ψ/memory/learnings/2026-03-14_agent-self-scheduling-over-external-cron_0",
+      "reranked_top1_id": "learning_github.com/laris-co/homelab/ψ/memory/learnings/2026-03-14_agent-self-scheduling-over-external-cron_3"
+    },
+    {
+      "label": "TH→EN  parallel Haiku agents for large-file analysis",
+      "expected_substring": "maeon-craft-oracle-birth-analysis",
+      "dense_rank": null,
+      "reranked_rank": null,
+      "dense_top1_id": "learning_github.com/laris-co/maeon-craft-oracle/ψ/memory/learnings/2026-01-31_parallel-agent-orchestration-for-large-file-anal_0",
+      "reranked_top1_id": "learning_github.com/laris-co/maeon-craft-oracle/ψ/memory/learnings/2026-01-31_parallel-agent-orchestration-for-large-file-anal_3"
+    },
+    {
+      "label": "TH→EN  session 11 dual-index bge-m3 (mostly EN query)",
+      "expected_substring": "session-11-dual-index-bge-m3",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "retro_22.16_session-11-dual-index-bge-m3_0",
+      "reranked_top1_id": "retro_22.16_session-11-dual-index-bge-m3_0"
+    },
+    {
+      "label": "TH→EN  voice tray central system",
+      "expected_substring": "voice-tray-central-voice-system",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "retro_17.05_voice-tray-central-voice-system_7",
+      "reranked_top1_id": "retro_17.05_voice-tray-central-voice-system_7"
+    },
+    {
+      "label": "EN→EN  git -C anti-pattern (English variant)",
+      "expected_substring": "maw-sync-best-practices",
+      "dense_rank": null,
+      "reranked_rank": null,
+      "dense_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/git/2025-12-28_git-c-not-cd_0",
+      "reranked_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/git/2025-12-28_git-c-not-cd_3"
+    },
+    {
+      "label": "EN→EN  oracle incarnation philosophy",
+      "expected_substring": "incarnation-vs-birth-oracle-identity",
+      "dense_rank": null,
+      "reranked_rank": null,
+      "dense_top1_id": "retro_15.01_oracle-philosophy-recursive-reincarnation-session_5",
+      "reranked_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/2026-01-10_oracle-philosophy-complete-book-recursive-reincarnation_3"
+    },
+    {
+      "label": "EN→EN  self-scheduling vs cron tradeoffs",
+      "expected_substring": "agent-self-scheduling-over-external-cron",
+      "dense_rank": 1,
+      "reranked_rank": 1,
+      "dense_top1_id": "learning_github.com/laris-co/homelab/ψ/memory/learnings/2026-03-14_agent-self-scheduling-over-external-cron_0",
+      "reranked_top1_id": "learning_github.com/laris-co/homelab/ψ/memory/learnings/2026-03-14_agent-self-scheduling-over-external-cron_4"
+    },
+    {
+      "label": "EN→EN  mobile training AI diary",
+      "expected_substring": "tong-claude-code-training",
+      "dense_rank": null,
+      "reranked_rank": null,
+      "dense_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/2026-01-21_mobile-oracle-session-pattern_4",
+      "reranked_top1_id": "learning_github.com/laris-co/nat-s-agents/ψ/memory/learnings/2026-01-17_rrr-retrospective-evolution-14-gist-revisions_0"
+    }
+  ]
+}
