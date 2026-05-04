@@ -1,0 +1,89 @@
+Embedding Model Benchmark: nomic-embed-text vs bge-m3 vs qwen3-embedding
+Corpus: 16 docs (8 Thai, 8 English)
+Queries: 10 (5 Thai, 5 English)
+Machine: m5 (18 CPUs)
+
+============================================================
+  Model: nomic-embed-text
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-nomic-embed-text-1777909296598
+[LanceDB] Collection 'bench_nomic_embed_text' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 192ms
+  Dimensions: 768
+  Air quality (Thai query): 8ms → [th2, th5, th4] 
+  Air quality (English query): 8ms → [en2, en3, en8] 
+  Flood monitoring (Thai query): 8ms → [th5, th4, th8] 
+  Flood monitoring (English query): 9ms → [en3, en2, en8] 
+  IoT sensors (Thai query): 8ms → [th5, th4, th1] 
+  IoT sensors (English query): 9ms → [en5, en3, en2] 
+  Brewing (Thai query): 9ms → [th5, th4, th8] 
+  Brewing (English query): 10ms → [en8, th8, th4] ✓ cross-lang
+  AI transparency (Thai query): 8ms → [th5, th4, th8] 
+  AI transparency (English query): 9ms → [en4, th5, th4] ✓ cross-lang
+[LanceDB] Collection 'bench_nomic_embed_text' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: bge-m3
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-bge-m3-1777909296939
+[LanceDB] Collection 'bench_bge_m3' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 761ms
+  Dimensions: 1024
+  Air quality (Thai query): 46ms → [th2, en2, th3] ✓ cross-lang
+  Air quality (English query): 47ms → [th2, en2, th3] ✓ cross-lang
+  Flood monitoring (Thai query): 47ms → [th3, en3, th2] ✓ cross-lang
+  Flood monitoring (English query): 47ms → [th3, en3, en2] ✓ cross-lang
+  IoT sensors (Thai query): 47ms → [th5, en5, th3] ✓ cross-lang
+  IoT sensors (English query): 48ms → [en5, th5, th3] ✓ cross-lang
+  Brewing (Thai query): 49ms → [th8, en8, th3] ✓ cross-lang
+  Brewing (English query): 48ms → [en8, th8, th2] ✓ cross-lang
+  AI transparency (Thai query): 47ms → [th4, en4, th1] ✓ cross-lang
+  AI transparency (English query): 48ms → [en4, th4, th6] ✓ cross-lang
+[LanceDB] Collection 'bench_bge_m3' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: qwen3-embedding
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-qwen3-embedding-1777909298223
+[LanceDB] Collection 'bench_qwen3_embedding' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 600ms
+qwen3-embedding failed: error: Failed to execute query stream: GenericFailure, Invalid input, No vector column found to match with the query vector dimension: 1024
+ code: "GenericFailure"
+
+
+
+
+======================================================================
+  RESULTS
+======================================================================
+
+| Metric | nomic-embed-text | bge-m3 |
+|--------|--------|--------|
+| Dimensions | 768 | 1024 |
+| Index 16 docs | 192ms | 761ms |
+| Query avg | 9ms | 47ms |
+| **Cross-language %** | **20%** | **100%** |
+
+
+--- Cross-Language Retrieval ---
+
+| Query | nomic-embed-text | bge-m3 |
+|-------|------|------|
+| Air quality (Thai query) | ✗ [th2,th5,th4] | ✓ [th2,en2,th3] |
+| Air quality (English query) | ✗ [en2,en3,en8] | ✓ [th2,en2,th3] |
+| Flood monitoring (Thai query) | ✗ [th5,th4,th8] | ✓ [th3,en3,th2] |
+| Flood monitoring (English query) | ✗ [en3,en2,en8] | ✓ [th3,en3,en2] |
+| IoT sensors (Thai query) | ✗ [th5,th4,th1] | ✓ [th5,en5,th3] |
+| IoT sensors (English query) | ✗ [en5,en3,en2] | ✓ [en5,th5,th3] |
+| Brewing (Thai query) | ✗ [th5,th4,th8] | ✓ [th8,en8,th3] |
+| Brewing (English query) | ✓ [en8,th8,th4] | ✓ [en8,th8,th2] |
+| AI transparency (Thai query) | ✗ [th5,th4,th8] | ✓ [th4,en4,th1] |
+| AI transparency (English query) | ✓ [en4,th5,th4] | ✓ [en4,th4,th6] |
+
+
+Done.
