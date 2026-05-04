@@ -1,0 +1,98 @@
+Embedding Model Benchmark: nomic-embed-text vs bge-m3 vs qwen3-embedding
+Corpus: 16 docs (8 Thai, 8 English)
+Queries: 10 (5 Thai, 5 English)
+Machine: m5 (18 CPUs)
+
+============================================================
+  Model: nomic-embed-text
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-nomic-embed-text-1777910097512
+[LanceDB] Collection 'bench_nomic_embed_text' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 682ms
+  Dimensions: 768
+  Air quality (Thai query): 9ms → [th2, th5, th4] 
+  Air quality (English query): 9ms → [en2, en3, en8] 
+  Flood monitoring (Thai query): 10ms → [th5, th4, th8] 
+  Flood monitoring (English query): 8ms → [en3, en2, en8] 
+  IoT sensors (Thai query): 9ms → [th5, th4, th1] 
+  IoT sensors (English query): 8ms → [en5, en3, en2] 
+  Brewing (Thai query): 9ms → [th5, th4, th8] 
+  Brewing (English query): 9ms → [en8, th8, th4] ✓ cross-lang
+  AI transparency (Thai query): 8ms → [th5, th4, th8] 
+  AI transparency (English query): 8ms → [en4, th5, th4] ✓ cross-lang
+[LanceDB] Collection 'bench_nomic_embed_text' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: bge-m3
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-bge-m3-1777910098355
+[LanceDB] Collection 'bench_bge_m3' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 1670ms
+  Dimensions: 1024
+  Air quality (Thai query): 49ms → [th2, en2, th3] ✓ cross-lang
+  Air quality (English query): 47ms → [th2, en2, th3] ✓ cross-lang
+  Flood monitoring (Thai query): 47ms → [th3, en3, th2] ✓ cross-lang
+  Flood monitoring (English query): 48ms → [th3, en3, en2] ✓ cross-lang
+  IoT sensors (Thai query): 48ms → [th5, en5, th3] ✓ cross-lang
+  IoT sensors (English query): 49ms → [en5, th5, th3] ✓ cross-lang
+  Brewing (Thai query): 50ms → [th8, en8, th3] ✓ cross-lang
+  Brewing (English query): 48ms → [en8, th8, th2] ✓ cross-lang
+  AI transparency (Thai query): 48ms → [th4, en4, th1] ✓ cross-lang
+  AI transparency (English query): 49ms → [en4, th4, th6] ✓ cross-lang
+[LanceDB] Collection 'bench_bge_m3' deleted
+[LanceDB] Closed
+
+============================================================
+  Model: qwen3-embedding
+============================================================
+[LanceDB] Connected at /var/folders/lf/s98q6y892sl__0brv1tyn0ch0000gn/T/oracle-bench-qwen3-embedding-1777910100560
+[LanceDB] Collection 'bench_qwen3_embedding' ready
+[LanceDB] Added 16 documents
+  Indexed 16 docs in 1354ms
+  Dimensions: 1024
+  Air quality (Thai query): 37ms → [en2, en3, th2] ✓ cross-lang
+  Air quality (English query): 80ms → [en2, en3, en5] 
+  Flood monitoring (Thai query): 37ms → [th3, en3, en2] ✓ cross-lang
+  Flood monitoring (English query): 61ms → [en3, en2, th3] ✓ cross-lang
+  IoT sensors (Thai query): 37ms → [en5, th5, en2] ✓ cross-lang
+  IoT sensors (English query): 33ms → [en5, en2, th5] ✓ cross-lang
+  Brewing (Thai query): 36ms → [th8, en8, en2] ✓ cross-lang
+  Brewing (English query): 66ms → [en8, th8, en2] ✓ cross-lang
+  AI transparency (Thai query): 37ms → [th4, en4, en7] ✓ cross-lang
+  AI transparency (English query): 32ms → [en4, en6, th4] ✓ cross-lang
+[LanceDB] Collection 'bench_qwen3_embedding' deleted
+[LanceDB] Closed
+
+
+======================================================================
+  RESULTS
+======================================================================
+
+| Metric | nomic-embed-text | bge-m3 | qwen3-embedding |
+|--------|--------|--------|--------|
+| Dimensions | 768 | 1024 | 1024 |
+| Index 16 docs | 682ms | 1670ms | 1354ms |
+| Query avg | 9ms | 48ms | 46ms |
+| **Cross-language %** | **20%** | **100%** | **90%** |
+
+
+--- Cross-Language Retrieval ---
+
+| Query | nomic-embed-text | bge-m3 | qwen3-embedding |
+|-------|------|------|------|
+| Air quality (Thai query) | ✗ [th2,th5,th4] | ✓ [th2,en2,th3] | ✓ [en2,en3,th2] |
+| Air quality (English query) | ✗ [en2,en3,en8] | ✓ [th2,en2,th3] | ✗ [en2,en3,en5] |
+| Flood monitoring (Thai query) | ✗ [th5,th4,th8] | ✓ [th3,en3,th2] | ✓ [th3,en3,en2] |
+| Flood monitoring (English query) | ✗ [en3,en2,en8] | ✓ [th3,en3,en2] | ✓ [en3,en2,th3] |
+| IoT sensors (Thai query) | ✗ [th5,th4,th1] | ✓ [th5,en5,th3] | ✓ [en5,th5,en2] |
+| IoT sensors (English query) | ✗ [en5,en3,en2] | ✓ [en5,th5,th3] | ✓ [en5,en2,th5] |
+| Brewing (Thai query) | ✗ [th5,th4,th8] | ✓ [th8,en8,th3] | ✓ [th8,en8,en2] |
+| Brewing (English query) | ✓ [en8,th8,th4] | ✓ [en8,th8,th2] | ✓ [en8,th8,en2] |
+| AI transparency (Thai query) | ✗ [th5,th4,th8] | ✓ [th4,en4,th1] | ✓ [th4,en4,en7] |
+| AI transparency (English query) | ✓ [en4,th5,th4] | ✓ [en4,th4,th6] | ✓ [en4,en6,th4] |
+
+
+Done.
