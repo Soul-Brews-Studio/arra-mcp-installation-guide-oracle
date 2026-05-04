@@ -4,8 +4,9 @@ date: 2026-05-02
 source: maw bud
 ---
 
-# Why sage-vector-fix was born
+# Birth & Rename
 
-Fix Sage Oracle's 3 vector retrieval bugs in arra-oracle-v3 (L2→cosine, bge-m3 prefix, chunking) — see gist xaxixak/e0593b7fea8db978b1417990e6a63f52
+Originally budded as **sage-vector-fix** to fix Sage Oracle's vector retrieval bugs.
+Renamed to **arra-mcp-installation-guide** on 2026-05-04 — repurposed as the arra/arthur-cli MCP server installation guide oracle.
 
 Budded from: sbs-repo
