@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/nat/Code/github.com/Soul-Brews-Studio/sage-vector-fix-oracle/.claude/hooks/tmux-to-maw.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

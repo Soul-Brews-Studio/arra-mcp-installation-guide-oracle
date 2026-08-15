@@ -1,0 +1,9 @@
+{
+  "contacts": {
+    "indexer-pro": {
+      "maw": "m5:indexer-pro",
+      "repo": "Soul-Brews-Studio/indexer-pro-oracle",
+      "notes": "Child oracle — interactive indexer app, budded 2026-05-02"
+    }
+  }
+}
